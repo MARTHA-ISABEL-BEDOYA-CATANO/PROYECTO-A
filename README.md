@@ -1,1 +1,5 @@
 # PROYECTO-A
+
+La Fundación FUNDACAQUETA desarrolla proyectos de inversión social y de salud con los habitantes del departamento del Caquetá y requiere administrar la información correspondiente a cada uno de los proyectos y actividades que se ejecutan para el cumplimiento del objeto de cada contrato. El aplicativo debe almacenar los registros de cada proyecto según el objeto del contrato, monto o valor del contrato, Objetivo general del contrato, fecha de inicio y fecha de finalización del proyecto, lugar de ejecución y actividades proyectadas para el cumplimiento y entrega del contrato. Además, el aplicativo debe almacenar la información de los profesionales que se vincularon al proyecto, como datos personales, perfil, cargo en el proyecto, valor contrato, duración del contrato y actividades a desarrollar.
+El aplicativo debe visualizar los proyectos por fechas, por valor o por profesionales ejecutando el proyecto según las consultas que realice.
+El aplicativo debe tener un usuario administrador y otros usuarios que son los auxiliares y los profesionales vinculados a los proyectos.
