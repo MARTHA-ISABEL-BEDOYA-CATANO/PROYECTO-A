@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package fundacaqueta;
-
+import Models.Conexion;
 /**
  *
  * @author clockwork
@@ -16,6 +16,11 @@ public class FUNDACAQUETA {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Conexion exe = new Conexion();
+        exe.Conectar();
+        
+        
+        
     }
     
 }
