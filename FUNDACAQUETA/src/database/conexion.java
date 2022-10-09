@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  *
  * @author clockwork
  */
-public class Conexion {
+public class conexion {
     
     private String usuario = "servidor";
     private String url = "jdbc:mysql://localhost:3306/FUNDACAQUETA";  

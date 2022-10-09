@@ -17,4 +17,18 @@ abstract class Persona {
     protected String direccion;
     protected String email;
     
+     protected boolean CreateFactory(String Consulta){
+        
+        return false;
+    }
+    protected boolean updateFactory (String Consulta, String column, String txt){
+        
+        return false;
+    }
+    
+    protected boolean deleteFactory(String table, String column ,String text){
+        
+        return false;
+    }
+    
 }

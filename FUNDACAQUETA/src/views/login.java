@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package views;
-import database.Conexion;
+import database.conexion;
 import javax.swing.JOptionPane;
 /**
  *

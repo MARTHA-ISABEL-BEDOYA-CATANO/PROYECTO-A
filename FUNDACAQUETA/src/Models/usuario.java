@@ -9,7 +9,7 @@ package Models;
  *
  * @author clockwork
  */
-public class usuario extends Profesional{
+public class usuario extends profesional{
     private String tipo;
     private String password;
     private String user_name;
