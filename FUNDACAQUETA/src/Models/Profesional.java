@@ -9,17 +9,7 @@ package Models;
  *
  * @author clockwork
  */
-public class Profesional extends Persona{
-    
-    private String actividad;
-
-    public String getActividad() {
-        return actividad;
-    }
-
-    public void setActividad(String actividad) {
-        this.actividad = actividad;
-    }
+public class Profesional extends Persona{   
     
     
 
