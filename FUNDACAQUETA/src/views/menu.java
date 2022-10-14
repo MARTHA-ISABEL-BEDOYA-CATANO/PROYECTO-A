@@ -30,7 +30,7 @@ public class menu extends javax.swing.JFrame {
         BtnUsuario = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         BtnFuncionario = new javax.swing.JButton();
-        BtnVacunas = new javax.swing.JButton();
+        BtnProfesional = new javax.swing.JButton();
         BtnPruebas4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,11 +54,11 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        BtnVacunas.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        BtnVacunas.setText("Profesional");
-        BtnVacunas.addActionListener(new java.awt.event.ActionListener() {
+        BtnProfesional.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        BtnProfesional.setText("Profesional");
+        BtnProfesional.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnVacunasActionPerformed(evt);
+                BtnProfesionalActionPerformed(evt);
             }
         });
 
@@ -78,7 +78,7 @@ public class menu extends javax.swing.JFrame {
                 .addGap(184, 184, 184)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BtnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnVacunas, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnProfesional, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnPruebas4, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(226, Short.MAX_VALUE))
@@ -93,7 +93,7 @@ public class menu extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(BtnVacunas, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BtnProfesional, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15)
                 .addComponent(BtnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -116,10 +116,14 @@ public class menu extends javax.swing.JFrame {
       
     }//GEN-LAST:event_BtnFuncionarioActionPerformed
 
-    private void BtnVacunasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVacunasActionPerformed
+    private void BtnProfesionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnProfesionalActionPerformed
         // TODO add your handling code here:
+        Profesionales exe = new Profesionales();
+        exe.setVisible(true);
+        this.hide();
+        
        
-    }//GEN-LAST:event_BtnVacunasActionPerformed
+    }//GEN-LAST:event_BtnProfesionalActionPerformed
 
     private void BtnPruebas4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPruebas4ActionPerformed
         // TODO add your handling code here:
@@ -163,9 +167,9 @@ public class menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnFuncionario;
+    private javax.swing.JButton BtnProfesional;
     private javax.swing.JButton BtnPruebas4;
     private javax.swing.JButton BtnUsuario;
-    private javax.swing.JButton BtnVacunas;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
