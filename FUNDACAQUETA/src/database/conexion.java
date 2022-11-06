@@ -24,7 +24,7 @@ public class conexion {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             link = DriverManager.getConnection(this.url, this.usuario, this.Contraseña);
-            JOptionPane.showMessageDialog(null, "Conexion abierta");
+            //JOptionPane.showMessageDialog(null, "Conexion abierta");
             
                       
         } catch (Exception ex) {

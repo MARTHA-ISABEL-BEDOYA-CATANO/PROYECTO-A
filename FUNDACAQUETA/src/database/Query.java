@@ -19,6 +19,68 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Query {
     
+     public  static  boolean insertar(String Consulta){
+         boolean estado = true;
+         PreparedStatement ps; 
+         try {
+             conexion sql = new  conexion();             
+             Connection  con = null;
+             con = sql.Conectar();
+            ps = con.prepareStatement(Consulta);
+            ps.executeUpdate();
+            estado = true;          
+             
+             
+         } catch (SQLException ex) {
+              System.out.println(ex.toString());
+              estado = false;
+             
+         }
+        return estado;
+    }
+     
+       public static ResultSet ComboBox(String columns, String table){
+         String Consulta = "select "+ columns +" from " + table;
+         ResultSet res = null;
+         PreparedStatement ps;
+         
+        try {         
+        
+         conexion sql = new  conexion();      
+         Connection con = null;
+         con = sql.Conectar();
+         ps = con.prepareStatement(Consulta);
+         res = ps.executeQuery();
+        } catch (SQLException e) {
+            
+            System.out.println(e.toString());
+        }       
+        
+         return res;
+        
+        
+    }
+     public static boolean update (String Consulta){       
+        boolean estado = true;
+         PreparedStatement ps; 
+         try {
+             conexion sql = new  conexion();      
+             Connection  con = null;
+             con = sql.Conectar();
+            ps = con.prepareStatement(Consulta);
+            ps.executeUpdate();
+            estado = true;       
+             
+             
+         } catch (SQLException ex) {
+              System.out.println(ex.toString());
+              estado = false;
+             
+         }
+        return estado;
+    
+    }
+    
       public static ResultSet read(String Query) {              
          ResultSet res =null;
          try {
@@ -62,6 +124,17 @@ public class Query {
         } catch (Exception e) {
         }
         
+        
+    }
+       
+       public static ResultSet Factura( String Consulta) throws Exception{          
+         PreparedStatement ps;
+         conexion sql = new  conexion();     
+       Connection con = null;
+       con = sql.Conectar();
+       ps = con.prepareStatement(Consulta);
+       ResultSet res = ps.executeQuery();
+       return res;
     }
     
 }

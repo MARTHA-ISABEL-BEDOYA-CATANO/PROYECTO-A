@@ -5,6 +5,11 @@
  */
 package Models;
 
+import database.conexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /**
  *
  * @author clockwork
@@ -37,5 +42,72 @@ public class usuario extends profesional{
     public void setUser_name(String user_name) {
         this.user_name = user_name;
     }
+    
+    @Override
+    public boolean CreateFactory(String Consulta) {
+        boolean estado = true;
+         PreparedStatement ps; 
+         try {
+              conexion sql = new conexion();             
+             Connection  con = null;
+             con = sql.Conectar();
+            ps = con.prepareStatement(Consulta);
+            ps.executeUpdate();
+            estado = true;          
+             
+             
+         } catch (SQLException ex) {
+              System.out.println(ex.toString());
+              estado = false;
+             
+         }
+        return estado; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean updateFactory(String Consulta, String column, String txt) {
+        String Query = Consulta + " where "+ column + " = '" + txt + "'";
+        
+        boolean estado = true;
+         PreparedStatement ps; 
+         try {
+             conexion sql = new conexion(); 
+             Connection  con = null;
+             con = sql.Conectar();
+            ps = con.prepareStatement(Query);
+            ps.executeUpdate();
+            estado = true;           
+             
+             
+         } catch (SQLException ex) {
+              System.out.println(ex.toString());
+              estado = false;
+             
+         }
+        return estado;
+    }
+
+    @Override
+    public boolean deleteFactory(String table, String column, String text) {
+        //To change body of generated methods, choose Tools | Templates.
+         boolean estado = false;
+          String Consulta= "delete from " + table +" where " + column +" = " + "'" + text + "'";
+        PreparedStatement ps;
+        try {
+           conexion sql = new conexion();
+            Connection con = null;
+            con = sql.Conectar();
+            ps = con.prepareStatement(Consulta);
+            ps.executeUpdate();
+            estado = true;
+            
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+            estado=false;
+        }
+        return estado;
+    }
+    
+    
     
 }
