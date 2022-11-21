@@ -127,6 +127,9 @@ public class menu extends javax.swing.JFrame {
 
     private void BtnPruebas4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPruebas4ActionPerformed
         // TODO add your handling code here:
+        Reportes exe = new Reportes();
+        exe.setVisible(true);
+        this.hide();
       
     }//GEN-LAST:event_BtnPruebas4ActionPerformed
 
